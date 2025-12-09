@@ -24,7 +24,9 @@ namespace API.Controllers
  
             return members;
         }
-
+// ovo je LINQ Language Integrated Query .toListAsync, .findAsync
+//  LINQ --> Entity Framework prevede --> SQL
+// prije njega moralo se ici kroz petlju za sve
         [HttpGet("{id}")] //localhost:5001/api/members/bob-id 
         public async Task<ActionResult<AppUser>> GetMember(string id)
         {
